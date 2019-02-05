@@ -5,7 +5,7 @@ from django.utils import timezone
 
 class PasteForm(forms.Form):
 
-	text = forms.CharField(max_length = 1000)
+	text = forms.CharField(max_length = 50000)
 	language = forms.CharField(max_length = 20)
 	title = forms.CharField(max_length = 50, required = False)
 	name = forms.CharField(max_length = 50)
