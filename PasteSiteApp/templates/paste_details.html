@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock %}
+{% block body %}
+	<div class="container">
+	    <h1>{{ paste.title }}</h1>
+	    {% if paste.name %}
+	    	<p>{{ paste.name }} tarafından {{ paste.created_on }} tarihinde oluşturulmuştur.</p>
+	    {% else %}
+	    	<p>{{ paste.created_on }} tarihinde oluşturulmuştur.</p>
+	    {% endif %}
+	    <hr>
+	    {% if paste.time_out %}
+	    	<p>{{ paste.time_out }} tarihinde süresi dolacaktır.</p>
+	    {% endif %}
+	    <div class="content">
+	    		{{ paste.text|safe }}
+	    </div>
+  	</div>
+{% endblock %}
