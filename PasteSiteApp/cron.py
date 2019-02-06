@@ -5,7 +5,7 @@ from django.utils import timezone
 from django.db import connection, transaction
 
 class MyCronJob(CronJobBase):
-    RUN_EVERY_MINS = 1 # her 1 günde
+    RUN_EVERY_MINS = 24 * 60 # her 1 günde bir tekrarla
     ALLOW_PARALLEL_RUNS = True
 
     schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
